@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaforix | Redefining Automotive Performance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Zaforix is redefining the future of automotive performance. Luxury, minimal aesthetics, and maximum power.">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo-link" aria-label="Zaforix Home">
+        <svg viewBox="0 0 100 100" class="logo-svg" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,85 L50,15 L80,85 L50,65 Z" fill="currentColor"/>
+        </svg>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="rd.html">R&D</a></li>
+        <li><a href="concepts.html">Concepts</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" alt="Sleek sports car driving on a night highway" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">ZAFORIX</h1>
+            <p class="hero-tagline">Redefining the Future of Automotive Performance.</p>
+            <div class="hero-actions">
+                <a href="vision.html" class="btn btn-primary">Explore Vision</a>
+                <a href="rd.html" class="btn">Follow Development</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt-bg">
+        <div class="section-content">
+            <h2>The Next Era of Driving</h2>
+            
+            <div class="split-section">
+                <div style="text-align: left;">
+                    <p>Zaforix represents the pinnacle of automotive engineering and uncompromised luxury. Currently in the research and development phase, we are forging paths to deliver uncompromising performance wrapped in striking contemporary silhouettes.</p>
+                    <p>Every line, curve, and mechanism is subjected to ruthless scrutiny in our pursuit of mechanical perfection. Welcome to the future of high-end driving experiences.</p>
+                    <a href="about.html" class="btn" style="margin-top: 2rem;">Read Our Story</a>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1503376713833-281b37dd1bd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Porsche driving fast on a winding mountain road">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Zaforix Automotive. All rights reserved.</p>
+</footer>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
