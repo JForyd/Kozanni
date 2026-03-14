@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Stats animation */
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
   const counters = document.querySelectorAll(".stat-number[data-target]");
 
@@ -140,7 +140,7 @@ window.addEventListener("load", () => {
     const target = parseInt(counter.dataset.target);
     let count = 0;
 
-    const speed = target / 100;
+    const speed = target / 120;
 
     const update = () => {
 
