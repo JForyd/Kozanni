@@ -131,59 +131,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Stats animation */
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
 
-  const statsSection = document.querySelector(".stats-bar");
-  const statItems = document.querySelectorAll(".stat-item");
   const counters = document.querySelectorAll(".stat-number[data-target]");
 
-  let statsTriggered = false;
+  counters.forEach(counter => {
 
-  const statsObserver = new IntersectionObserver(entries => {
+    const target = parseInt(counter.dataset.target);
+    let count = 0;
 
-    entries.forEach(entry => {
+    const speed = target / 100;
 
-      if (entry.isIntersecting && !statsTriggered) {
+    const update = () => {
 
-        statsTriggered = true;
+      count += speed;
 
-        statsSection.classList.add("visible");
-
-        statItems.forEach((item, index) => {
-          setTimeout(() => {
-            item.classList.add("visible");
-          }, index * 200);
-        });
-
-        counters.forEach(counter => {
-
-          const target = parseInt(counter.getAttribute("data-target"));
-          let count = 0;
-
-          const updateCount = () => {
-
-            const increment = Math.ceil(target / 120);
-            count += increment;
-
-            if (count < target) {
-              counter.innerText = count;
-              requestAnimationFrame(updateCount);
-            } else {
-              counter.innerText = target;
-            }
-
-          };
-
-          updateCount();
-
-        });
-
+      if (count < target) {
+        counter.innerText = Math.floor(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
       }
 
-    });
+    };
+
+    update();
 
   });
-
-  statsObserver.observe(statsSection);
 
 });
