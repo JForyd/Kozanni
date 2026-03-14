@@ -1,3 +1,20 @@
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+
+    const url = this.href;
+
+    if (url && !url.includes("#")) {
+      e.preventDefault();
+
+      document.body.classList.add("page-exit");
+
+      setTimeout(() => {
+        window.location = url;
+      }, 500);
+    }
+  });
+});
+
 /* ============================================
    ZAFORIX — Main JavaScript v2
    Premium Interactions & Animations
