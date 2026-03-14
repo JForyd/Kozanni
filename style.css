@@ -117,6 +117,38 @@ img {
   color: var(--bg-primary);
 }
 
+/* Cinematic page transition */
+
+body {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(6px);
+  animation: pageEnter 0.9s ease forwards;
+}
+
+@keyframes pageEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+body.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  animation: pageExit 0.5s ease forwards;
+}
+
+@keyframes pageExit {
+  to {
+    opacity: 0;
+    transform: translateY(-40px);
+    filter: blur(10px);
+  }
+}
+
 /* ============================================
    Typography — Strong Hierarchy
    ============================================ */
