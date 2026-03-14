@@ -3,76 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaforix | Redefining Automotive Performance</title>
+    <title>Zaforix | Performance Reimagined</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="Zaforix is redefining the future of automotive performance. Luxury, minimal aesthetics, and maximum power.">
+    <meta name="description" content="Zaforix is an automotive performance company focused on creative design, purposeful engineering, and cost optimization.">
 </head>
 <body>
 
-<nav class="navbar">
-    <a href="index.html" class="logo-link" aria-label="Zaforix Home">
-        <svg viewBox="0 0 100 100" class="logo-svg" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20,85 L50,15 L80,85 L50,65 Z" fill="currentColor"/>
-        </svg>
-    </a>
-    <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="vision.html">Vision</a></li>
-        <li><a href="rd.html">R&D</a></li>
-        <li><a href="concepts.html">Concepts</a></li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<main>
-    <section class="hero">
-        <img src="https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" alt="Sleek sports car driving on a night highway" class="hero-bg">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">ZAFORIX</h1>
-            <p class="hero-tagline">Redefining the Future of Automotive Performance.</p>
-            <div class="hero-actions">
-                <a href="vision.html" class="btn btn-primary">Explore Vision</a>
-                <a href="rd.html" class="btn">Follow Development</a>
-            </div>
+    <nav class="navbar">
+        <a href="#hero" class="logo-link" aria-label="Zaforix Home">
+            <img src="assets/logo.png" alt="Zaforix Logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#rd">R&D</a></li>
+            <li><a href="#concepts">Concepts</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </section>
+    </nav>
 
-    <section class="section alt-bg">
-        <div class="section-content">
-            <h2>The Next Era of Driving</h2>
-            
-            <div class="split-section">
-                <div style="text-align: left;">
-                    <p>Zaforix represents the pinnacle of automotive engineering and uncompromised luxury. Currently in the research and development phase, we are forging paths to deliver uncompromising performance wrapped in striking contemporary silhouettes.</p>
-                    <p>Every line, curve, and mechanism is subjected to ruthless scrutiny in our pursuit of mechanical perfection. Welcome to the future of high-end driving experiences.</p>
-                    <a href="about.html" class="btn" style="margin-top: 2rem;">Read Our Story</a>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1503376713833-281b37dd1bd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Porsche driving fast on a winding mountain road">
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1 class="hero-text reveal"><span class="brand-font">ZAFORIX</span></h1>
+                <p class="hero-tagline reveal" style="font-size: 1.5rem; max-width: 650px; margin-bottom: 3rem;">
+                    Engineering the next generation of performance. <br>Driven by data. Defined by design. <br>The future of the driving experience starts here.
+                </p>
+                <div class="hero-actions reveal">
+                    <a href="#concepts" class="btn btn-primary">The Vision</a>
+                    <a href="#rd" class="btn" style="margin-left: 20px;">R&D PHASE 01</a>
                 </div>
             </div>
-            
+        </section>
+
+        <!-- 2. The Idea Behind Zaforix -->
+        <section id="about" class="reveal">
+            <div class="container">
+                <h2 class="section-title">The Idea Behind <span class="brand-font" style="font-size: inherit;">Zaforix</span></h2>
+                <div class="grid-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                    <div>
+                        <p style="font-size: 1.2rem; margin-bottom: 1.5rem;"><span class="brand-font">Zaforix</span> is currently in a state of high-intensity early development. We are not just building vehicles; we are exploring the fundamental relationship between automotive design and performance philosophy.</p>
+                        <p>Our journey begins with radical design exploration, questioning every legacy convention in the industry to find a more purposeful way forward. We believe that true innovation happens when engineering is unburdened by tradition.</p>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Design sketches and engineering precision" style="border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. A New Approach to Performance -->
+        <section id="vision" class="reveal" style="background: #050505;">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                    <h2 class="section-title" style="display: inline-block;">A New Approach to Performance</h2>
+                    <p style="font-size: 2.2rem; font-weight: 300; line-height: 1.4; margin-top: 2rem; font-family: 'Inter';">
+                        Exceptional automotive performance should not be a privilege reserved for the elite hypercar landscape.
+                    </p>
+                    <p style="margin-top: 2rem; color: #aaa; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        At <span class="brand-font">Zaforix</span>, we are rethinking the economics of speed. Through radical optimization and purposeful engineering, we aim to deliver uncompromising performance to a new generation of drivers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Built Through Research -->
+        <section id="rd" class="reveal">
+            <div class="container">
+                <h2 class="section-title">Built Through Research</h2>
+                <p style="margin-bottom: 3rem; color: #888; max-width: 600px;">Our current roadmap is defined by ruthless Research and Development. We are validating new thermal management systems, composite structures, and aerodynamic profiles.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="rd-card" style="padding: 40px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;">
+                        <h3 class="accent-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Aerodynamics</h3>
+                        <p>Simulating flow efficiency to maximize downforce while reducing structural complexity.</p>
+                    </div>
+                    <div class="rd-card" style="padding: 40px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;">
+                        <h3 class="accent-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Material Science</h3>
+                        <p>Exploring composite optimizations that balance cost with high-strength performance metrics.</p>
+                    </div>
+                    <div class="rd-card" style="padding: 40px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;">
+                        <h3 class="accent-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Propulsion</h3>
+                        <p>Next-generation electronic drivetrains optimized for linear power delivery and thermal stability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Future Vehicles / Concepts -->
+        <section id="concepts" class="reveal" style="background: #050505;">
+            <div class="container">
+                <h2 class="section-title">Future Concepts</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div class="concept-item" style="position: relative; overflow: hidden; aspect-ratio: 16/9;">
+                        <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Zaforix Concept Alpha" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="overlay-content" style="position: absolute; bottom: 0; left: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); width: 100%;">
+                            <h3 style="font-size: 2rem;">Concept Alpha</h3>
+                            <p class="accent-text">Aerodynamic focus. Pure performance.</p>
+                        </div>
+                    </div>
+                    <div class="concept-item" style="position: relative; overflow: hidden; aspect-ratio: 16/9;">
+                        <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Zaforix Concept Beta" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="overlay-content" style="position: absolute; bottom: 0; left: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); width: 100%;">
+                            <h3 style="font-size: 2rem;">Concept Beta</h3>
+                            <p class="accent-text">Urban performance. Efficient power.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Philosophy -->
+        <section id="philosophy" class="reveal">
+            <div class="container">
+                <h2 class="section-title">Philosophy</h2>
+                <div style="max-width: 900px;">
+                    <h3 style="font-size: 3rem; margin-bottom: 2rem;">Design <span class="accent-text">+</span> Engineering</h3>
+                    <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #ccc;">At <span class="brand-font">Zaforix</span>, we don't believe in design for the sake of beauty, nor engineering for the sake of numbers. Every curve is a calculation. Every component has a purpose. We call it "Purposed Aesthetics".</p>
+                    <p style="color: #888;">By stripping away the unnecessary and optimizing the essential, we create machines that are raw, honest, and devastatingly fast.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Newsletter / Updates -->
+        <section id="newsletter" class="reveal" style="min-height: 50vh; background: #080808;">
+            <div class="container">
+                <div style="text-align: center; border: 1px solid var(--accent-color); padding: 80px 40px; box-shadow: 0 0 30px var(--accent-glow);">
+                    <h2 class="bebas-font" style="font-size: 3rem; margin-bottom: 1rem;">Join the Evolution</h2>
+                    <p style="margin-bottom: 2.5rem; color: #ccc;">Subscribe for exclusive updates on R&D progress and concept reveals.</p>
+                    <form style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto;">
+                        <input type="email" placeholder="YOUR EMAIL ADDRESS" style="flex: 1; padding: 15px; background: transparent; border: 1px solid #444; color: white; font-family: 'Inter';">
+                        <button type="submit" class="btn btn-primary" style="padding: 15px 30px;">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact -->
+        <section id="contact" class="reveal">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 100px;">
+                    <div>
+                        <h3 class="accent-text" style="font-size: 1.5rem; margin-bottom: 2rem;">Inquiries</h3>
+                        <p style="margin-bottom: 1rem;">General: <a href="mailto:info@zaforix.com">info@zaforix.com</a></p>
+                        <p style="margin-bottom: 1rem;">Engineering: <a href="mailto:eng@zaforix.com">eng@zaforix.com</a></p>
+                        <p>Press: <a href="mailto:media@zaforix.com">media@zaforix.com</a></p>
+                    </div>
+                    <div>
+                        <h3 class="accent-text" style="font-size: 1.5rem; margin-bottom: 2rem;">Social</h3>
+                        <p style="margin-bottom: 1rem;"><a href="#">INSTAGRAM</a></p>
+                        <p style="margin-bottom: 1rem;"><a href="#">X (TWITTER)</a></p>
+                        <p><a href="#">LINKEDIN</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 9. Footer -->
+    <footer style="padding: 60px 0; border-top: 1px solid #111; background: #000;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <svg viewBox="0 0 100 100" style="height: 30px; fill: #444;" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,85 L50,15 L80,85 L50,65 Z" />
+                </svg>
+                <p style="color: #444; font-size: 0.8rem; margin-top: 10px;">&copy; 2026 <span class="brand-font" style="color: inherit;">ZAFORIX</span> AUTOMOTIVE LUXURY PERFORMANCE. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div style="display: flex; gap: 30px; font-size: 0.8rem; color: #888;">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">COOKIES</a>
+            </div>
         </div>
-    </section>
-</main>
+    </footer>
 
-<footer>
-    <p>&copy; 2026 Zaforix Automotive. All rights reserved.</p>
-</footer>
-
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
