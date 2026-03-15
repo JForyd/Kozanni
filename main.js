@@ -129,23 +129,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* Startup logo fade */
-
 window.addEventListener("load", () => {
 
   const startup = document.getElementById("startup");
 
   setTimeout(() => {
 
-    startup.style.opacity = "0";
+    startup.style.display = "none";
 
-    setTimeout(() => {
-      startup.remove();
-    }, 800);
-
-  }, 2500);
-
-});
-  });
+  }, 2200);
 
 });
