@@ -129,26 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* =========================
-   Startup Sequence
-========================= */
+/* Startup logo fade */
 
 window.addEventListener("load", () => {
 
-  const bird = document.getElementById("birdLogo");
-  const video = document.getElementById("introVideo");
   const startup = document.getElementById("startup");
 
   setTimeout(() => {
-
-    bird.style.opacity = "0";
-
-    video.style.display = "block";
-    video.play();
-
-  }, 2500);
-
-  video.addEventListener("ended", () => {
 
     startup.style.opacity = "0";
 
@@ -156,6 +143,9 @@ window.addEventListener("load", () => {
       startup.remove();
     }, 800);
 
+  }, 2500);
+
+});
   });
 
 });
