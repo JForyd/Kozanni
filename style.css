@@ -1114,3 +1114,82 @@ footer .copyright {
 .eyebrow .flag-blue{ color:#3C3B6E !important; }
 .eyebrow .flag-red{ color:#B22234 !important; }
 .eyebrow .flag-white{ color:#ffffff !important; }
+
+/* =========================
+   Startup Sequence
+========================= */
+
+#startup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+}
+
+/* bird */
+
+.bird-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#birdLogo {
+  width: 160px;
+  opacity: 0;
+  animation: birdReveal 2s forwards;
+}
+
+@keyframes birdReveal {
+  0% { opacity: 0; transform: scale(0.95); }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* headlights */
+
+.headlight {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+  opacity: 0;
+  filter: blur(40px);
+}
+
+.headlight.left {
+  left: -250px;
+  animation: headlights 1.2s forwards;
+  animation-delay: 0.6s;
+}
+
+.headlight.right {
+  right: -250px;
+  animation: headlights 1.2s forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes headlights {
+  0% { opacity: 0; transform: translateX(0); }
+  40% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateX(200px); }
+}
+
+/* video */
+
+#introVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
