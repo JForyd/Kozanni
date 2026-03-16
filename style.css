@@ -400,8 +400,13 @@ p {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(5,5,5,0.0) 0%, rgba(5,5,5,0.1) 0%, rgba(5,5,5,1.0) 150%, transparent 100%, var(--bg-primary) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(5,5,5,0.2) 0%,
+    rgba(5,5,5,0.45) 40%,
+    rgba(5,5,5,0.75) 70%,
+    var(--bg-primary) 100%
+  );
 }
 
 .hero-content {
