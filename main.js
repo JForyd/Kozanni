@@ -1,18 +1,21 @@
-document.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", function(e) {
+document.querySelectorAll("a[href]").forEach(link => {
 
-    const url = this.href;
+  link.addEventListener("click", e => {
 
-    if (url && !url.includes("#")) {
-      e.preventDefault();
+    const href = link.getAttribute("href");
 
-      document.body.classList.add("page-exit");
+    if (!href || href.startsWith("#") || href.startsWith("http")) return;
 
-      setTimeout(() => {
-        window.location = url;
-      }, 500);
-    }
+    e.preventDefault();
+
+    document.body.classList.add("page-exit");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 300);
+
   });
+
 });
 
 /* ============================================
