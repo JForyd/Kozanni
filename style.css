@@ -1109,23 +1109,21 @@ footer .copyright {
 .eyebrow .flag-red{ color:#B22234 !important; }
 .eyebrow .flag-white{ color:#ffffff !important; }
 
-/* ===== Startup Logo Intro ===== */
+/* ===== Startup Logo Intro — Fixed ===== */
 
 #startup {
   position: fixed;
   inset: 0;
   background: black;
-
-  backdrop-filter: blur(6px);   /* add this line */
-
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 99999;
-  opacity: 1;
-  transition: opacity 1s ease;
-
-  pointer-events: all;
+  
+  /* ADDED: This makes the whole black screen vanish after 3.5 seconds */
+  animation: startupExit 0.5s ease 3.5s forwards;
+  pointer-events: none; /* Allows clicking through immediately if needed */
 }
 
 #startupLogo {
@@ -1134,31 +1132,31 @@ footer .copyright {
   animation: logoFade 3.0s cubic-bezier(.33,.01,.19,1) forwards;
 }
 
-@keyframes logoFade {
+/* New animation to remove the black curtain */
+@keyframes startupExit {
+  from { opacity: 1; visibility: visible; }
+  to { opacity: 0; visibility: hidden; }
+}
 
+@keyframes logoFade {
   0% {
     opacity: 0;
     transform: scale(0.94);
     filter: blur(6px);
   }
-
   15% {
     opacity: 1;
     transform: scale(1);
     filter: blur(0);
   }
-
   40% {
     opacity: 1;
     transform: scale(1.02);
     filter: blur(0);
   }
-
   100% {
     opacity: 0;
     transform: scale(1.03);
     filter: blur(0);
   }
-
 }
-
