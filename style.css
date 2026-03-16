@@ -181,7 +181,7 @@ p {
   z-index: 1000;
 
   background: transparent;
-  transition: background 0.35s ease, box-shadow 0.35s ease;
+  transition: background 0.45s ease, box-shadow 0.45s ease;
 }
 
 .navbar.scrolled {
