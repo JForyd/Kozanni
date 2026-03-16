@@ -1148,3 +1148,8 @@ footer .copyright {
     opacity: 1;
   }
 }
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
