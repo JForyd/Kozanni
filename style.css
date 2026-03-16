@@ -363,9 +363,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-
-  padding-top: 18vh;   /* controls vertical placement */
+  justify-content: center;
 
   text-align: center;
   overflow: hidden;
@@ -440,9 +438,10 @@ p {
   flex-wrap: wrap;
 }
 
-.hero-logo{
+.hero-logo {
   width: clamp(700px, 60vw, 1600px);
   height: auto;
+
   display:block;
   margin:0 auto 1rem auto;
 }
