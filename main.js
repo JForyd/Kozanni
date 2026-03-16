@@ -135,13 +135,16 @@ window.addEventListener("load", () => {
 
   const startup = document.getElementById("startup");
 
-  // Always make sure scrolling is enabled first
-  document.body.classList.remove("no-scroll");
-
-  // If no startup element exists, stop here
   if (!startup) return;
 
-  // Lock scrolling
+  // Only show startup animation once per session
+  if (sessionStorage.getItem("startupPlayed")) {
+    startup.remove();
+    return;
+  }
+
+  sessionStorage.setItem("startupPlayed", "true");
+
   document.body.classList.add("no-scroll");
 
   setTimeout(() => {
@@ -149,15 +152,10 @@ window.addEventListener("load", () => {
     startup.style.opacity = "0";
 
     setTimeout(() => {
-
       startup.remove();
-
-      // Always restore scrolling
       document.body.classList.remove("no-scroll");
-
     }, 1000);
 
   }, 2200);
 
 });
-
