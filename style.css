@@ -412,7 +412,11 @@ p {
 }
 
 .hero-content {
-  position: relative; 
+  position: absolute; /* Changed from relative */
+  top: 40%;          /* Pulls the center of the content to 40% from the top */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Keeps it perfectly centered horizontally */
+  
   max-width: 1400px;
   width: 100%;
   padding: 0 2rem;
@@ -420,13 +424,6 @@ p {
   flex-direction: column;
   align-items: center;
   z-index: 2;
-
-  /* THE CONTROL LEVERS: */
-  /* 1. This moves the WHOLE group (Logo, Tagline, Buttons) up */
-  transform: translateY(-12vh); 
-
-  /* 2. Optional: If the gap between Logo and Tagline is too big, use this: */
-  margin-top: 0; 
 }
 
 .hero-logo {
@@ -444,8 +441,10 @@ p {
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-top: -1.5rem; /* Pulls tagline closer to logo */
-  margin-bottom: 2.5rem;
+  
+  margin-top: -2rem;    /* Pulls text UP into the logo */
+  margin-bottom: 2rem;  /* Reduces the push against the buttons */
+  
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
