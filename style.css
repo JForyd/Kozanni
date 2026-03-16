@@ -1244,17 +1244,40 @@ footer .copyright {
 
 }
 
-/* Reduce the gap under the logo */
-.hero-logo {
-  margin-bottom: 0.5rem !important; /* Changed from 1rem */
-}
-
-/* Reduce the gap under the tagline */
-.hero-tagline {
-  margin-bottom: 1.5rem !important; /* Changed from 3.5rem */
-}
-
-/* Optional: Pull the whole group slightly higher up the page */
+/* 1. Reset the main container so it stays centered */
 .hero-content {
-  transform: translateY(-5vh); 
+  transform: translateY(0); /* Resetting the previous group shift */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. Move the Logo DOWN */
+.hero-logo {
+  width: clamp(400px, 50vw, 1200px);
+  height: auto;
+  /* Adjust the 4rem to push it further down or up from the top */
+  margin-top: 4rem !important; 
+  /* Negative margin here pulls the tagline UP toward the logo */
+  margin-bottom: -2rem !important; 
+}
+
+/* 3. Move the Tagline & Buttons UP */
+.hero-tagline {
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  
+  /* PULLS the tagline and everything below it up */
+  transform: translateY(-20px); 
+  
+  /* TIGHTENS space between tagline and buttons */
+  margin-bottom: 1.5rem !important; 
+}
+
+/* 4. Ensure buttons follow the upward shift */
+.hero-actions {
+  transform: translateY(-20px);
 }
