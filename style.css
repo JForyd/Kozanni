@@ -432,6 +432,14 @@ p {
   flex-wrap: wrap;
 }
 
+.hero-logo {
+  width: clamp(260px, 45vw, 750px);
+  height: auto;
+
+  margin-bottom: 2rem;
+
+  filter: drop-shadow(0 0 40px rgba(0,0,0,0.35));
+}
 /* Scroll indicator */
 .hero-scroll {
   position: absolute;
