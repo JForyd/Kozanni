@@ -1115,36 +1115,22 @@ footer .copyright {
 
   0% {
     opacity: 0;
-    transform: scale(0.94);
-    filter: blur(8px);
+    transform: scale(0.92);
   }
 
-  15% {
-    opacity: 0.8;
-    filter: blur(4px);
-  }
-
-  28% {
+  25% {
     opacity: 1;
     transform: scale(1);
-    filter: blur(0);
   }
 
   70% {
     opacity: 1;
     transform: scale(1.02);
-    filter: blur(0);
-  }
-
-  85% {
-    opacity: 0.8;
-    filter: blur(2px);
   }
 
   100% {
     opacity: 0;
-    transform: scale(1.05);
-    filter: blur(6px);
+    transform: scale(1.06);
   }
 
 }
