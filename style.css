@@ -373,13 +373,12 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* Changed from center to flex-start to allow manual positioning */
-  justify-content: flex-start; 
-  /* Adjust this percentage to move the whole group up or down (e.g., 5vh is higher) */
-  padding-top: 12vh; 
+  justify-content: center; /* Center naturally */
   align-items: center;
   text-align: center;
   overflow: hidden;
+  /* Remove the padding-top that was pushing it down */
+  padding-top: 0; 
 }
 
 .hero-bg {
@@ -421,14 +420,15 @@ p {
   flex-direction: column;
   align-items: center;
   z-index: 2;
+  /* Use transform to move the WHOLE group up instead of margins */
+  transform: translateY(-8vh); 
 }
 
 .hero-logo {
-  /* Smaller clamp prevents the image from pushing content down with its height */
-  width: clamp(400px, 45vw, 1000px); 
+  width: clamp(400px, 50vw, 1200px);
   height: auto;
   display: block;
-  margin: 0 auto 0 auto; 
+  margin-bottom: 0; /* Remove bottom margin to tighten gap */
 }
 
 .hero-tagline {
@@ -437,12 +437,10 @@ p {
   color: rgba(255,255,255,0.55);
   letter-spacing: 3px;
   text-transform: uppercase;
-  /* AGGRESSIVE MOVE: Pulls text up significantly */
-  margin-top: -4rem; 
-  /* Tightens the space before buttons */
-  margin-bottom: 1.5rem; 
+  /* Instead of margin-top: -4rem, use a smaller controlled margin */
+  margin-top: -1rem; 
+  margin-bottom: 2rem;
 }
-
 .hero-actions {
   display: flex;
   gap: 1.5rem;
