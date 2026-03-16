@@ -80,35 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ---- Navbar scroll behavior ----
-// ---- Navbar scroll behavior (black only when scrolling up) ----
+// ---- Navbar scroll behavior ----
 const navbar = document.getElementById('navbar');
-let lastScroll = 0;
 
 if (navbar) {
-
-  window.addEventListener('scroll', () => {
-
-    const currentScroll = window.scrollY;
-
-    if (currentScroll <= 50) {
-      navbar.classList.remove('scrolled');
-      lastScroll = currentScroll;
-      return;
-    }
-
-    if (currentScroll < lastScroll) {
-      // scrolling up
+  const updateNavbar = () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 60) {
       navbar.classList.add('scrolled');
     } else {
-      // scrolling down
       navbar.classList.remove('scrolled');
     }
+  };
 
-    lastScroll = currentScroll;
-
-  }, { passive: true });
-
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  updateNavbar();
 }
 
   // ---- Parallax effect on hero background ----
