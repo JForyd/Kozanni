@@ -351,11 +351,7 @@ p {
 }
 
 /* ============================================
-   Hero Section — Cinematic Fullscreen
-   ============================================ */
-
-/* ============================================
-   Hero Section — Cinematic Fullscreen (Tightened)
+   Hero Section — Aggressive Upward Shift
    ============================================ */
 
 .hero {
@@ -365,7 +361,10 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Keeps the group centered vertically */
+  /* Changed from center to flex-start to allow manual positioning */
+  justify-content: flex-start; 
+  /* Adjust this percentage to move the whole group up or down (e.g., 5vh is higher) */
+  padding-top: 10vh; 
   align-items: center;
   text-align: center;
   overflow: hidden;
@@ -410,16 +409,13 @@ p {
   flex-direction: column;
   align-items: center;
   z-index: 2;
-  /* Pulls the entire content block up slightly for better visual balance */
-  transform: translateY(-20px); 
 }
 
 .hero-logo {
-  /* Reduced max-width slightly to prevent huge vertical footprints */
-  width: clamp(500px, 55vw, 1200px); 
+  /* Smaller clamp prevents the image from pushing content down with its height */
+  width: clamp(400px, 45vw, 1000px); 
   height: auto;
   display: block;
-  /* Removed the 1rem bottom margin to bring the tagline up */
   margin: 0 auto 0 auto; 
 }
 
@@ -429,10 +425,10 @@ p {
   color: rgba(255,255,255,0.55);
   letter-spacing: 3px;
   text-transform: uppercase;
-  /* Using a negative margin to pull the text closer to the logo graphics */
-  margin-top: -0.5rem; 
-  /* Reduced bottom margin to bring buttons up */
-  margin-bottom: 2rem; 
+  /* AGGRESSIVE MOVE: Pulls text up significantly */
+  margin-top: -4rem; 
+  /* Tightens the space before buttons */
+  margin-bottom: 1.5rem; 
 }
 
 .hero-actions {
@@ -442,12 +438,12 @@ p {
   flex-wrap: wrap;
 }
 
-/* Optional: In case you are still using the h1 title instead of the logo */
+/* Kept for fallback, but tightened */
 .hero-title {
   font-size: clamp(4.5rem, 14vw, 12rem);
   letter-spacing: clamp(8px, 2vw, 20px);
   text-shadow: 0 0 80px var(--accent-glow-subtle), 0 2px 40px rgba(0,0,0,0.5);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 0.95;
 }
 /* Scroll indicator */
