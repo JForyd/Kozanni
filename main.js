@@ -82,24 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ---- Navbar scroll behavior ----
+// ---- Navbar scroll behavior ----
 const navbar = document.getElementById('navbar');
 
 if (navbar) {
 
-  const updateNavbar = () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
+  function updateNavbar() {
+    if (window.scrollY <= 0) {
       navbar.classList.remove('scrolled');
+    } else {
+      navbar.classList.add('scrolled');
     }
-  };
+  }
 
   window.addEventListener('scroll', updateNavbar, { passive: true });
 
-  // Run once when the page loads
-  updateNavbar();
+  // Run once when page loads
+  window.addEventListener('load', updateNavbar);
 }
 
   // ---- Parallax effect on hero background ----
