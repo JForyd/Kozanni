@@ -413,7 +413,7 @@ p {
 
 .hero-content {
   position: absolute; /* Changed from relative */
-  top: 40%;          /* Pulls the center of the content to 40% from the top */
+  top: 60%;          /* Pulls the center of the content to 40% from the top */
   left: 50%;
   transform: translate(-50%, -50%); /* Keeps it perfectly centered horizontally */
   
