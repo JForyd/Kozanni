@@ -137,13 +137,13 @@ window.addEventListener("load", () => {
 
   if (!startup) return;
 
-  // Only show startup animation once per session
-  if (sessionStorage.getItem("startupPlayed")) {
+  // Only play intro once per session
+  if (sessionStorage.getItem("introPlayed") === "true") {
     startup.remove();
     return;
   }
 
-  sessionStorage.setItem("startupPlayed", "true");
+  sessionStorage.setItem("introPlayed", "true");
 
   document.body.classList.add("no-scroll");
 
@@ -154,8 +154,8 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       startup.remove();
       document.body.classList.remove("no-scroll");
-    }, 1000);
+    }, 2500);
 
-  }, 2200);
+  }, 2500);
 
 });
