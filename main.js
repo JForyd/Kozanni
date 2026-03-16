@@ -85,12 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---- Navbar scroll behavior ----
 const navbar = document.getElementById("navbar");
+const hero = document.querySelector(".hero");
 
-if (navbar) {
+if (navbar && hero) {
 
   function updateNavbar() {
 
-    if (window.scrollY > 80) {
+    const heroHeight = hero.offsetHeight;
+
+    if (window.scrollY > heroHeight * 0.35) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
