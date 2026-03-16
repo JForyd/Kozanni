@@ -1093,7 +1093,7 @@ footer .copyright {
   align-items: center;
   z-index: 99999;
   opacity: 1;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.0s ease;
 
   pointer-events: all;
 }
