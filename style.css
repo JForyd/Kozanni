@@ -182,10 +182,13 @@ p {
 
   background: transparent;
 
-  transition: background 0.5s ease, box-shadow 0.5s ease;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .navbar.scrolled {
+  transform: translateY(0);
+
   background: rgba(5,5,5,0.96);
   border-bottom: 1px solid var(--border-subtle);
   box-shadow: 0 1px 30px rgba(0,0,0,0.5);
