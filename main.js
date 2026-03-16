@@ -85,26 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---- Navbar scroll behavior ----
 const navbar = document.getElementById("navbar");
-const hero = document.querySelector(".hero");
 
-if (navbar && hero) {
+function updateNavbar() {
+  if (!navbar) return;
 
-  function updateNavbar() {
-
-    const heroHeight = hero.offsetHeight;
-
-    if (window.scrollY > heroHeight * 0.9) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
   }
-
-  window.addEventListener("scroll", updateNavbar, { passive: true });
-  window.addEventListener("load", updateNavbar);
-
 }
+
+window.addEventListener("scroll", updateNavbar, { passive: true });
+window.addEventListener("load", updateNavbar);
 
   // ---- Parallax effect on hero background ----
   const heroBg = document.querySelector('.hero-bg');
