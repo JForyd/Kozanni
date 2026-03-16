@@ -146,6 +146,6 @@ window.addEventListener("load", () => {
       document.body.classList.remove("no-scroll");
     }, 400);
 
-  }, 3000);
+  }, 3800);
 
 });
