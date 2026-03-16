@@ -1154,3 +1154,18 @@ footer .copyright {
   }
 
 }
+
+/* Reduce the gap under the logo */
+.hero-logo {
+  margin-bottom: 0.5rem !important; /* Changed from 1rem */
+}
+
+/* Reduce the gap under the tagline */
+.hero-tagline {
+  margin-bottom: 1.5rem !important; /* Changed from 3.5rem */
+}
+
+/* Optional: Pull the whole group slightly higher up the page */
+.hero-content {
+  transform: translateY(-5vh); 
+}
