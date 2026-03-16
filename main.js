@@ -80,12 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
 // ---- Navbar scroll behavior ----
 const navbar = document.getElementById('navbar');
 
 if (navbar) {
+
   const updateNavbar = () => {
     const scrollY = window.scrollY;
+
     if (scrollY > 60) {
       navbar.classList.add('scrolled');
     } else {
@@ -94,7 +97,7 @@ if (navbar) {
   };
 
   window.addEventListener('scroll', updateNavbar, { passive: true });
-  updateNavbar();
+
 }
 
   // ---- Parallax effect on hero background ----
