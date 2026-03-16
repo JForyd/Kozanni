@@ -143,6 +143,7 @@ window.addEventListener("load", () => {
 
   document.body.classList.add("no-scroll");
 
+  // match logo animation length
   setTimeout(() => {
 
     startup.style.opacity = "0";
@@ -150,8 +151,8 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       startup.remove();
       document.body.classList.remove("no-scroll");
-    }, 2500);
+    }, 400);
 
-  }, 4500);
+  }, 3500);
 
 });
