@@ -93,7 +93,7 @@ if (navbar && hero) {
 
     const heroHeight = hero.offsetHeight;
 
-    if (window.scrollY > heroHeight * 0.35) {
+    if (window.scrollY > heroHeight * 0.9) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
