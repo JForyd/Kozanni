@@ -412,7 +412,7 @@ p {
   object-fit: cover;
   z-index: -2;
   animation: cinematicZoom 30s infinite alternate ease-in-out;
-  filter: brightness(0.90) contrast(1.1);
+  filter: brightness(1.00) contrast(1.1);
 }
 
 @keyframes cinematicZoom {
@@ -425,7 +425,7 @@ p {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.55) 35%, rgba(5,5,5,0.85) 65%, transparent 90%, var(--bg-primary) 100%);
+    linear-gradient(180deg, rgba(5,5,5,0.70) 50%, rgba(5,5,5,0.55) 20%, rgba(5,5,5,0.85) 90%, transparent 100%, var(--bg-primary) 100%);
 }
 
 .hero-content {
