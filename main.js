@@ -81,23 +81,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---- Navbar scroll behavior ----
-  const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
+// ---- Navbar scroll behavior (black only when scrolling up) ----
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
 
-  if (navbar) {
-    const updateNavbar = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 60) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-      lastScroll = scrollY;
-    };
+if (navbar) {
 
-    window.addEventListener('scroll', updateNavbar, { passive: true });
-    updateNavbar();
-  }
+  window.addEventListener('scroll', () => {
+
+    const currentScroll = window.scrollY;
+
+    if (currentScroll <= 50) {
+      navbar.classList.remove('scrolled');
+      lastScroll = currentScroll;
+      return;
+    }
+
+    if (currentScroll < lastScroll) {
+      // scrolling up
+      navbar.classList.add('scrolled');
+    } else {
+      // scrolling down
+      navbar.classList.remove('scrolled');
+    }
+
+    lastScroll = currentScroll;
+
+  }, { passive: true });
+
+}
 
   // ---- Parallax effect on hero background ----
   const heroBg = document.querySelector('.hero-bg');
