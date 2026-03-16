@@ -135,12 +135,19 @@ window.addEventListener("load", () => {
 
   const startup = document.getElementById("startup");
 
+  // Disable scrolling while intro plays
+  document.body.classList.add("no-scroll");
+
   setTimeout(() => {
 
     startup.style.opacity = "0";
 
     setTimeout(() => {
       startup.remove();
+
+      // Re-enable scrolling
+      document.body.classList.remove("no-scroll");
+
     }, 1000);
 
   }, 2200);
