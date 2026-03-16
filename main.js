@@ -135,7 +135,10 @@ window.addEventListener("load", () => {
 
   const startup = document.getElementById("startup");
 
-  // Disable scrolling while intro plays
+  // If there is no startup animation, do nothing
+  if (!startup) return;
+
+  // Lock scrolling
   document.body.classList.add("no-scroll");
 
   setTimeout(() => {
@@ -145,7 +148,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       startup.remove();
 
-      // Re-enable scrolling
+      // Unlock scrolling
       document.body.classList.remove("no-scroll");
 
     }, 1000);
@@ -153,3 +156,4 @@ window.addEventListener("load", () => {
   }, 2200);
 
 });
+
