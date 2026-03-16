@@ -359,14 +359,16 @@ p {
   height: 100vh;
   min-height: 700px;
   width: 100%;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 18vh;   /* controls vertical placement */
+
   text-align: center;
   overflow: hidden;
-
-  margin-top: calc(-1 * var(--nav-height));
 }
 
 .hero-bg {
@@ -427,7 +429,7 @@ p {
   font-weight: 300;
   color: rgba(255,255,255,0.55);
   letter-spacing: 3px;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.2rem;
   text-transform: uppercase;
 }
 
@@ -441,10 +443,8 @@ p {
 .hero-logo{
   width: clamp(700px, 60vw, 1600px);
   height: auto;
-
   display:block;
-  margin:2vh auto 1.2rem auto;   /* smaller margin */
-
+  margin:0 auto 1rem auto;
 }
 
 /* Scroll indicator */
