@@ -90,17 +90,19 @@ const navbar = document.getElementById("navbar");
 if (navbar) {
 
   function updateNavbar() {
-
-    if (window.scrollY < 10) {
+    if (window.scrollY <= 5) {
       navbar.classList.remove("scrolled");
     } else {
       navbar.classList.add("scrolled");
     }
-
   }
 
-  window.addEventListener("scroll", updateNavbar);
-  updateNavbar(); // run immediately on page load
+  window.addEventListener("scroll", updateNavbar, { passive: true });
+
+  // Run AFTER layout settles
+  window.addEventListener("load", () => {
+    setTimeout(updateNavbar, 50);
+  });
 
 }
 
